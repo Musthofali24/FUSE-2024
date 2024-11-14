@@ -14,16 +14,16 @@ class M_Register extends CI_Model
 	public function sendConfirmationEmail($to, $subject, $message)
 	{
 		$config['protocol'] = 'smtp';
-		$config['smtp_host'] = 'smtp.hostinger.com';
-		$config['smtp_user'] = 'fusepolman@fuse2024.com';
-		$config['smtp_pass'] = 'Fuse_2024';
+		$config['smtp_host'] = '//';
+		$config['smtp_user'] = '//';
+		$config['smtp_pass'] = '//';
 		$config['smtp_port'] = 465;
 		$config['charset'] = 'utf-8';
 		$config['mailtype'] = 'html';
 		$config['newline'] = "\r\n";
 		$config['smtp_crypto'] = 'ssl';
 		$this->email->initialize($config);
-		$this->email->from('fusepolman@fuse2024.com', 'Fuse2024');
+		$this->email->from('//', '//');
 		$this->email->to($to);
 		$this->email->subject($subject);
 		$this->email->message($message);
