@@ -1,0 +1,235 @@
+/*  */
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Bebas+Neue&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Quantico:wght@400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+/* VARIABEL CSS */
+
+:root {
+  --color-hitam: #1a1a1a;
+  --color-putih: #ffffff;
+  --color-btn: #eee6ab;
+  --text-color: #ffffff;
+  --text-color-opacity: rgba(255, 255, 255, 0.5);
+}
+
+/* RESET CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Audiowide", sans-serif;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+/* BACKGROUND */
+
+#particles-js {
+  position: fixed;
+  z-index: -999;
+  width: 100%;
+  height: 500%;
+  background-color: #000000;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* CSS */
+.container {
+  max-width: 100%;
+  width: 700px;
+}
+
+label span {
+  color: red;
+}
+
+label,
+input,
+label span,
+option,
+select,
+span,
+option,
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+label {
+  font-size: 15px;
+}
+
+/* FORM */
+.form_regist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 100px 0px;
+}
+
+.form_regist header {
+  color: var(--text-color);
+  font-weight: 500;
+  text-align: center;
+  font-size: 50px;
+  padding-bottom: 30px;
+}
+
+.form_regist header span {
+  font-size: 60px;
+  text-shadow: rgba(250, 250, 250, 0.9) 0px 0px 37px;
+  font-family: "Audiowide", sans-serif;
+}
+
+.form_regist .astro1,
+.form_regist .astro2 {
+  animation: float 3s infinite;
+  -webkit-animation: float 3s infinite;
+}
+
+.form_regist .astro1 {
+  width: 300px;
+  position: absolute;
+  top: 400px;
+  right: 80px;
+  z-index: 2;
+}
+
+.form_regist .astro2 {
+  width: 300px;
+  position: absolute;
+  top: 400px;
+  left: 80px;
+  z-index: 2;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.form_regist .form {
+  background-color: rgb(255, 255, 255);
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.form_regist .form .input-box {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.form_regist .form .input-box input,
+.form_regist .form .input-box select,
+.form_regist .form .input-box button {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  padding: 0 15px;
+}
+
+.form_regist .form .input-box select {
+  background-color: white;
+}
+
+.form_regist .form .input-box input[type="file"] {
+  padding: 10px 15px;
+  border: none;
+}
+
+input[type="file"]::file-selector-button {
+  border: 1px solid black;
+  outline: none;
+  background: var(--color-hitam);
+  color: var(--color-putih);
+  padding: 7px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.form_regist .form .column {
+  display: flex;
+  column-gap: 20px;
+}
+
+.form_regist .form .input-box button {
+  background-color: #1a1a1a;
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form_regist .form .input-box button:hover {
+  background-color: #555555;
+}
+
+@media screen and (max-width: 1500px) {
+  .form_regist .astro1,
+  .form_regist .astro2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .form_regist .form .column {
+    flex-wrap: wrap;
+  }
+
+  .container {
+    width: 450px;
+  }
+
+  label {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 340px;
+  }
+
+  .form_regist header {
+    font-size: 40px;
+  }
+
+  .form_regist header span {
+    font-size: 40px;
+    width: 300px;
+  }
+
+  .form_regist .form .input-box input {
+    font-size: 13px;
+  }
+
+  label,
+  input {
+    font-size: 13px;
+  }
+}
